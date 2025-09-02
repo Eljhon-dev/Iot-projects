@@ -1,0 +1,34 @@
+
+ #define BLYNK_PRINT Serial
+ #define BLYNK_TEMPLATE_ID "TMPL6wvjCilT1"
+ #define BLYNK_TEMPLATE_NAME "first project"
+
+ #include <WiFi.h>
+ #include <WiFiClient.h>
+ #include <BlynkSimpleEsp32.h>
+
+ char auth [] = "i56E_SrYTHk-nv1cMxNgIXid9jqmWqLQ";
+
+ char ssid [] = "HUAWEI-2.4G-g7RG";
+ char pass [] = "zYv2PKSD";
+
+ int ledpin = 13;
+
+void setup() {
+ Serial.begin (921600);
+ Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
+ pinMode(ledpin, OUTPUT);
+
+
+ Serial.println("wifi connected..");
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  Blynk.run();
+}
