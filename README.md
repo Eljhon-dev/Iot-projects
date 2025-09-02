@@ -8,7 +8,7 @@ Beginner on using ESP 32
 ## Contributing
 Feel free to submit issues or request so I could improve my skills on handling arduuino
 
-##Instillation
+## Instillation
 1. Clone the repository
 2. Open in arduino or any kind of IDE that has a esp 32
 3. Items: esp 32, Led, Resistor (220 ohms), male and female jumper wire
